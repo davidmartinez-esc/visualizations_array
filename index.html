@@ -1,111 +1,53 @@
 <!DOCTYPE html>
-
 <html lang="es">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lobby de Visualizaciones</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            /* 1. Establece la imagen de fondo usando la URL (la ruta a tu GIF).
+               2. background-repeat: no-repeat; (Opcional: si el GIF no debe repetirse)
+               3. background-size: cover; ajusta el GIF para que cubra todo el viewport.
+            */
+            background: url('assets/ROTATING_GLOBE.gif') no-repeat center center fixed;
+            background-size: cover;
+        }
 
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Lobby de Visualizaciones</title>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <style>
-
-        body {
-
-            /* 1. Establece la imagen de fondo usando la URL (la ruta a tu GIF).
-
-               2. background-repeat: no-repeat; (Opcional: si el GIF no debe repetirse)
-
-               3. background-size: cover; ajusta el GIF para que cubra todo el viewport.
-
-            */
-
-            background: url('assets/ROTATING_GLOBE.gif') no-repeat center center fixed;
-
-            background-size: cover;
-
-        }
-
-
-
-        /* Se elimina la animación 'gradient' y sus keyframes, 
-
-           ya que el GIF proporciona el movimiento.
-
-        */
-
-    </style>
-
+        /* Se elimina la animación 'gradient' y sus keyframes, 
+           ya que el GIF proporciona el movimiento.
+        */
+    </style>
 </head>
-
 <body class="bg-gray-100 flex items-center justify-center min-h-screen">
 
+    <div class="text-center">
+        <h1 class="text-3xl font-bold mb-6">📊 Visualizaciones</h1>
+        <p class="mb-8 text-gray-600">Selecciona la vista que quieras explorar</p>
 
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <a href="visualizacion1.html" 
+               class="block bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+                <h2 class="text-xl font-semibold mb-2">Visualización 1</h2>
+                <p class="text-gray-500">Descripción breve de la primera visualización</p>
+            </a>
 
-  <div class="text-center">
+            <a href="visualizacion2.html" 
+               class="block bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+                <h2 class="text-xl font-semibold mb-2">Visualización 2</h2>
+                <p class="text-gray-500">Explicación corta de lo que muestra</p>
+            </a>
 
-    <h1 class="text-3xl font-bold mb-6">📊 Visualizaciones</h1>
+            <a href="visualizacion3.html" 
+               class="block bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+                <h2 class="text-xl font-semibold mb-2">Visualización 3</h2>
+                <p class="text-gray-500">Resumen de esta vista</p>
+            </a>
 
-    <p class="mb-8 text-gray-600">Selecciona la vista que quieras explorar</p>
-
-
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-      
-
-      <!-- Tarjeta 1 -->
-
-      <a href="visualizacion1.html" 
-
-         class="block bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
-
-        <h2 class="text-xl font-semibold mb-2">Visualización 1</h2>
-
-        <p class="text-gray-500">Descripción breve de la primera visualización</p>
-
-      </a>
-
-
-
-      <!-- Tarjeta 2 -->
-
-      <a href="visualizacion2.html" 
-
-         class="block bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
-
-        <h2 class="text-xl font-semibold mb-2">Visualización 2</h2>
-
-        <p class="text-gray-500">Explicación corta de lo que muestra</p>
-
-      </a>
-
-
-
-      <!-- Tarjeta 3 -->
-
-      <a href="visualizacion3.html" 
-
-         class="block bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
-
-        <h2 class="text-xl font-semibold mb-2">Visualización 3</h2>
-
-        <p class="text-gray-500">Resumen de esta vista</p>
-
-      </a>
-
-
-
-    </div>
-
-  </div>
-
-
+        </div>
+    </div>
 
 </body>
-
 </html>
