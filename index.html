@@ -10,56 +10,42 @@
             /* Establece la imagen de fondo, sin repetición, centrada y fija. */
             background: url('assets/ROTATING_GLOBE.gif') no-repeat center center fixed;
             background-size: cover;
-            /* Agregamos padding-top para que el contenido no quede detrás del encabezado fijo */
-            padding-top: 5rem; /* pt-20 en Tailwind (5rem = 80px) */
-            padding-bottom: 7rem; /* Espacio para el footer */
-        }
-
-        /* Estilos para el texto que contraste sobre el GIF */
-        .main-content-text {
-            color: white; 
-            font-weight: bold;
-            text-shadow: 0 0 10px rgba(0, 0, 0, 0.9), 0 0 5px rgba(0, 0, 0, 0.7); 
+            /* Asegura que no haya padding extra que interfiera con el centrado */
+            padding: 0; 
         }
     </style>
 </head>
-<body class="bg-gray-100 min-h-screen">
+<body class="flex items-center justify-center min-h-screen p-4">
 
-    <header class="fixed top-0 left-0 w-full bg-white bg-opacity-90 backdrop-blur-sm shadow-xl z-50 p-4">
-        <h1 class="text-4xl font-extrabold text-center text-gray-900">
+    <div class="text-center max-w-4xl mx-auto p-8 rounded-2xl">
+        
+        <h1 class="text-3xl font-extrabold text-gray-900 
+                   bg-white/90 backdrop-blur-sm p-4 mb-8 rounded-3xl shadow-2xl border border-white/50 inline-block">
             Visualizations Lobby
         </h1>
-    </header>
 
-    <div class="text-center p-4">
-        <p class="main-content-text text-2xl mt-10 sm:mt-0">
-            Explora las visualizaciones interactivas disponibles.
-        </p>
-    </div>
-
-    <footer class="fixed bottom-0 left-0 w-full z-50 p-4"> 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
             
             <a href="visualizacion1.html" 
-                class="block bg-white/70 backdrop-blur-sm p-4 rounded-xl shadow-2xl transition transform hover:scale-105 border border-white/50 text-center">
-                <h2 class="text-xl font-bold text-blue-600">Visualización 1</h2>
-                <p class="text-sm text-gray-700 hidden sm:block">Descripción breve de la primera visualización</p>
+                class="block bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-2xl transition transform hover:scale-105 border border-white text-center">
+                <h2 class="text-lg font-bold text-blue-600">Visualización 1</h2>
+                <p class="text-xs text-gray-700 mt-1">Descripción breve de la primera visualización</p>
             </a>
 
             <a href="visualizacion2.html" 
-                class="block bg-white/70 backdrop-blur-sm p-4 rounded-xl shadow-2xl transition transform hover:scale-105 border border-white/50 text-center">
-                <h2 class="text-xl font-bold text-green-600">Visualización 2</h2>
-                <p class="text-sm text-gray-700 hidden sm:block">Explicación corta de lo que muestra</p>
+                class="block bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-2xl transition transform hover:scale-105 border border-white text-center">
+                <h2 class="text-lg font-bold text-green-600">Visualización 2</h2>
+                <p class="text-xs text-gray-700 mt-1">Explicación corta de lo que muestra</p>
             </a>
 
             <a href="visualizacion3.html" 
-                class="block bg-white/70 backdrop-blur-sm p-4 rounded-xl shadow-2xl transition transform hover:scale-105 border border-white/50 text-center">
-                <h2 class="text-xl font-bold text-purple-600">Visualización 3</h2>
-                <p class="text-sm text-gray-700 hidden sm:block">Resumen de esta vista</p>
+                class="block bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-2xl transition transform hover:scale-105 border border-white text-center">
+                <h2 class="text-lg font-bold text-purple-600">Visualización 3</h2>
+                <p class="text-xs text-gray-700 mt-1">Resumen de esta vista</p>
             </a>
 
         </div>
-    </footer>
+    </div>
 
 </body>
 </html>
